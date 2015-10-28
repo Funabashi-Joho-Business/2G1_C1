@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>BMIとか体重とかー</title>
-<meta name="author" content="">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" href="fjb.css">
-<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<meta charset="UTF-8">
+	<title>BMIとか体重とかー</title>
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="fjb.css">
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
 	<!-- サイドバー部分 -->
 	<div id = "sidebar">
 		<b>ID:</b>
-		<input type="text" name="id" size="7" maxlength="3"><br>
+		<input type="text" name="id" size="7" maxlength="3"><br><br>
 		<b>パスワード:</b>
 		<input type="text" name="pass" size="7" maxlength="3">
 	</div>
@@ -29,5 +29,12 @@
 		<input type="submit" value="送信">
 	</main>
 	<!-- ---- -->
+	
+	<!-- 出力結果 -->
+	<div id = "ketsu">
+		<h2>あなたのBMIは：</h2>
+		<textarea name="BMI" rows="4" cols="40"></textarea><br>
+	</div>
+	<!-- -- -->
 </body>
 </html>
