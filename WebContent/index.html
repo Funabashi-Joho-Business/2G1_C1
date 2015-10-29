@@ -21,12 +21,15 @@
 
 	<!-- メイン部分 -->
 	<main>
+	<form>
      	<b> 身長：</b>
-    	<input type="text" name="height" size="7" maxlength="3"><br><br>
+    	<input type="number" name="a"   size="7" maxlength="3"><br><br>
 
     	 <b> 体重：</b>
-     	<input type="text" name="weight" size="7" maxlength="3"><br><br>
-		<input type="submit" value="送信">
+     	<input type="number" name="b"   size="7" maxlength="3"><br><br>
+		<output name="op1">0</output>
+		<input type="button" onclick="op1.value = Number(b.value) / (Number(a.value / 100) * Number(a.value / 100));" value="計算する">
+		</form>
 	</main>
 	<!-- ---- -->
 </body>
