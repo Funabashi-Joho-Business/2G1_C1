@@ -8,8 +8,11 @@ function Main()
 	
 	//セレクターで各要素のインスタンスを取得
 	var output = document.querySelector("div#output");
-	var data1 = document.querySelector("input#name");
-	var data2 = document.querySelector("textarea#msg");
+	var data1 = document.querySelector("input#i");
+	var data2 = document.querySelector("input#p");
+	var data3 = document.querySelector("input#s");
+	var data4 = document.querySelector("input#t");
+	var data4 = document.querySelector("input#b");
 	var button = document.querySelector("input#bt");
 	button.addEventListener("click", onClick, false);
 
@@ -30,8 +33,8 @@ function Main()
 		//データ送信
 		var sendData = {};
 		sendData.cmd = "write";
-		sendData.name = data1.value;
-		sendData.msg = data2.value;
+		sendData.s = data3.value;
+		sendData.t = data4.value;
 		AFL.sendJson("Ajax10",sendData,onRecv);
 	}
 

@@ -7,33 +7,35 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link rel="stylesheet" href="fjb.css">
+	<script type="text/javascript" src="Scripts/AflLib.js"></script>
+	<script type="text/javascript" src="Scripts/BMIJava.js"></script>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
 	<!-- サイドバー部分 -->
 	<div id = "sidebar">
 		<b>ID:</b>
-		<input type="text" name="id" size="7" maxlength="3"><br><br>
+		<input type="text" name="id" id="i" size="7" maxlength="3"><br><br>
 		<b>パスワード:</b>
-		<input type="text" name="pass" size="7" maxlength="3">
+		<input type="text" name="pass" id="p" size="7" maxlength="3">
 	</div>
 	<!-- -- -->
 
 	<!-- メイン部分 -->
 	<main>
      	<b> 身長：</b>
-    	<input type="text" name="height" size="7" maxlength="3"><br><br>
+    	<input type="text" name="height" id="s" size="7" maxlength="3"><br><br>
 
     	 <b> 体重：</b>
-     	<input type="text" name="weight" size="7" maxlength="3"><br><br>
-		<input type="submit" value="送信">
+     	<input type="text" name="weight" id="w" size="7" maxlength="3"><br><br>
+		<input type="submit" id="bt" value="送信">
 	</main>
 	<!-- ---- -->
 	
 	<!-- 出力結果 -->
 	<div id = "ketsu">
 		<h2>あなたのBMIは：</h2>
-		<textarea name="BMI" rows="4" cols="40"></textarea><br>
+		<textarea name="BMI" id = "b" rows="4" cols="40"></textarea><br>
 	</div>
 	<!-- -- -->
 </body>
