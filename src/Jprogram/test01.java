@@ -62,7 +62,7 @@ public class test01 extends HttpServlet {
         else
         {
         	AjaxData msg = new AjaxData();
-        	msg.Msg = data.A + data.B + "が送られてきました";
+        	msg.Msg = (data.A + data.B) + "が送られてきました";
             //JSON形式に変換
             String json = JSON.encode(msg);
             //出力

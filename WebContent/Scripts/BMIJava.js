@@ -12,7 +12,7 @@ function Main()
 	var data2 = document.querySelector("input#p");
 	var data3 = document.querySelector("input#s");
 	var data4 = document.querySelector("input#t");
-	var data4 = document.querySelector("input#b");
+	var data5 = document.querySelector("input#b");
 	var button = document.querySelector("input#bt");
 	button.addEventListener("click", onClick, false);
 
@@ -35,11 +35,11 @@ function Main()
 		sendData.cmd = "write";
 		sendData.s = data3.value;
 		sendData.t = data4.value;
-		AFL.sendJson("Ajax10",sendData,onRecv);
+		AFL.sendJson("test01",sendData,onRecv);
 	}
 
 	
 	//データ受信要求
 	var sendData = {"cmd":"read"};
-	AFL.sendJson("Ajax10",sendData,onRecv);
+	AFL.sendJson("test01",sendData,onRecv);
 }
