@@ -15,6 +15,8 @@ function Main()
 	function onClick()
 	{
 		//計算式
-		output.innerHTML = parseFloat(data2.value) / (parseFloat(data1.value) / 100.0) / (parseFloat(data1.value) / 100.0);		
+		output.innerHTML = parsefloat(data2.value) / (parsefloat(data1.value) / 100.0) / (parsefloat(data1.value) / 100.0);	
+		System.out.println(data2);
+		System.out.println(data1);
 	}
 }
