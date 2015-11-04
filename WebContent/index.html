@@ -7,6 +7,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" href="fjb.css">
+<script type="text/javascript" src="Scripts/are.js"></script>
 <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -23,13 +24,14 @@
 	<main>
 	<form>
      	<b> 身長：</b>
-    	<input type="number" name="a"   size="7" maxlength="3" ><br><br>
+    	<input type="number" name="a" id=data01  size="7" maxlength="3" ><br><br>
 
     	 <b> 体重：</b>
 
-     	<input type="number" name="b"   size="7" maxlength="3"><br><br>
-		<output name="op1">0</output>
-		<input type="button" onclick="op1.value = Number(b.value) / (Number(a.value / 100) * Number(a.value / 100));" value="計算する" >
+     	<input type="number" name="b" id=data02  size="7" maxlength="3"><br><br>
+		<output name="op1" id= "kekka">0</output>
+		<input type="button" id="bt" value="計算する" >
+		
 		</form>
 
 	</main>
