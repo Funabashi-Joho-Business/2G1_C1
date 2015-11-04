@@ -7,30 +7,28 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" href="fjb.css">
+<script type="text/javascript" src="Scripts/are.js"></script>
 <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
 	<!-- サイドバー部分 -->
-	<div id = "sidebar">
-		<b>ID:</b>
-		<input type="text" name="id" size="7" maxlength="7" ><br>
-		<b>パスワード:</b>
-		<input type="text" name="pass" size="7" >
+	<div id="sidebar">
+		<b>ID:</b> <input type="text" name="id" size="7" maxlength="7"><br>
+		<b>パスワード:</b> <input type="text" name="pass" size="7">
 	</div>
 	<!-- -- -->
 
 	<!-- メイン部分 -->
 	<main>
 	<form>
-     	<b> 身長：</b>
-    	<input type="number" name="a"   size="7" maxlength="3" ><br><br>
+		<b> 身長：</b> <input type="number" id=data01 size="7" maxlength="3"><br>
+		<br> <b> 体重：</b> <input type="number" id=data02 size="7"
+			maxlength="3"><br>
+		<br>
+		<output id="kekka">0</output>
+		<input type="button" id="bt" value="計算する">
 
-    	 <b> 体重：</b>
-
-     	<input type="number" name="b"   size="7" maxlength="3"><br><br>
-		<output name="op1">0</output>
-		<input type="button" onclick="op1.value = Number(b.value) / (Number(a.value / 100) * Number(a.value / 100));" value="計算する" >
-		</form>
+	</form>
 
 	</main>
 	<!-- ---- -->
