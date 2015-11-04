@@ -2,17 +2,29 @@
 #sidebar {
   width: 180px;
   float: left;
-  margin: 0;
-  padding: 0;
+  margin: 10px 0px 500px 0px;
+  padding: 10px 0px 250px 0px;
   background-color: #b0e0e6;
+  border-style: solid;
+  border-width: 1px;
+  
 }
 
-#main {
-	float: right;
-	margin: 0;
-  	padding: 0;
+#main form{
+	margin: 10px 0px 10px 0px;
+  	padding: 50px;
+  	border-style: solid;
+  	border-width: 1px;
 }
 
 body{
-	background-color: #ffe4e1;
+	position: static;   
+}
+
+#top{
+	border-style: solid;
+	border-width: 1px;
+	background-color: #b0e0e6;
+	padding: 30px 0px 30px 0px;
+
 }
