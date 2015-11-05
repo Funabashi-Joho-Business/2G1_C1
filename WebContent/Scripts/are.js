@@ -13,8 +13,10 @@ function Main() {
 	button.addEventListener("click", onClick);
 	function onClick() {
 		// 計算式
-		output.innerHTML = parseFloat(data2.value)
+		var num = parseFloat(data2.value)
 				/ (parseFloat(data1.value) / 100.0)
-				/ (parseFloat(data1.value) / 100.0);
+				/ (parseFloat(data1.value) / 100.0)*100;
+		num = Math.round(num)/100;
+		output.innerHTML = num;
 	}
 }
