@@ -100,6 +100,16 @@ function Main() {
 	// 体重
 	var data2 = document.querySelector("input#data02");
 	var button = document.querySelector("input#bt");
+	//
+	var time1 = document.querySelector("output#time1");
+	var date1 = document.querySelector("output#date1");
+	
+	//時刻
+	var today = new Date();
+	var date = today.toLocaleDateString();
+	var time = today.toLocaleTimeString();
+	date1.innerHTML = date;
+	time1.innerHTML = time;
 
 	// クリックイベントの処理
 	button.addEventListener("click", onClick);
@@ -110,5 +120,8 @@ function Main() {
 				/ (parseFloat(data1.value) / 100.0)*100;
 		num = Math.round(num)/100;
 		output.innerHTML = num;
+		
+
 	}
 }
+
