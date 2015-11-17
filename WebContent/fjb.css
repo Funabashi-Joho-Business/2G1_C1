@@ -1,6 +1,4 @@
-body{
-	background-image:url("sample.png");
-}
+
 /*-------------------------sidebar�̎w��*/
 #sidebar {
   width: 180px;
@@ -9,7 +7,6 @@ body{
   padding: 10px 0px 10px 0px;
   border-style: solid;
   border-width: 1px;
-	background-image:url("sample.png");
 }
 
 #main form{
@@ -21,10 +18,7 @@ body{
 
 body{
 	position: static;
-<<<<<<< HEAD
-=======
-	background-image:url(sample3.gif);   
->>>>>>> 作業用ブランチ
+	background-image:url("sample3.gif");
 }
 
 #top{
