@@ -21,6 +21,10 @@ body{
 
 body{
 	position: static;
+<<<<<<< HEAD
+=======
+	background-image:url(sample3.gif);   
+>>>>>>> 作業用ブランチ
 }
 
 #top{
