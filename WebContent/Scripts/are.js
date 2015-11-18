@@ -41,16 +41,16 @@ function start() {
 	var group = document.createElement("div");
 	document.body.appendChild(group);
 
-	var inputUser = document.createElement("input#id");
+	var inputUser = document.createElement("input");
 	group.appendChild(inputUser);
-	var inputPass = document.createElement("input#pass");
+	var inputPass = document.createElement("input");
 	group.appendChild(inputPass);
 	inputPass.type = "password";
-	var buttonLogin = document.createElement("input#login");
+	var buttonLogin = document.createElement("input");
 	group.appendChild(buttonLogin);
 	buttonLogin.type = "button";
 	buttonLogin.value = "ログイン";
-	var buttonLogout = document.createElement("input#logout");
+	var buttonLogout = document.createElement("input");
 	group.appendChild(buttonLogout);
 	buttonLogout.type = "button";
 	buttonLogout.value = "ログアウト";
@@ -92,6 +92,8 @@ function start() {
 }
 
 function Main() {
+	
+	start();
 
 	// セレクターで各要素のインスタンスを取得
 	var output = document.querySelector("output#kekka");
