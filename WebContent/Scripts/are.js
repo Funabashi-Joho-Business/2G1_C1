@@ -54,6 +54,13 @@ function start() {
 	group.appendChild(buttonLogout);
 	buttonLogout.type = "button";
 	buttonLogout.value = "ログアウト";
+	
+	//時刻
+	var today = new Date();
+	var date = today.toLocaleDateString();
+	var time = today.toLocaleTimeString();
+	date1.innerHTML = date;
+	time1.innerHTML = time;
 
 	// ボタンが押された場合の処理
 	buttonLogin.onclick = function() {
@@ -106,12 +113,7 @@ function Main() {
 	var time1 = document.querySelector("output#time1");
 	var date1 = document.querySelector("output#date1");
 	
-	//時刻
-	var today = new Date();
-	var date = today.toLocaleDateString();
-	var time = today.toLocaleTimeString();
-	date1.innerHTML = date;
-	time1.innerHTML = time;
+
 
 	// クリックイベントの処理
 	button.addEventListener("click", onClick);
@@ -123,7 +125,6 @@ function Main() {
 		num = Math.round(num)/100;
 		output.innerHTML = num;
 		
-
 	}
 }
 
