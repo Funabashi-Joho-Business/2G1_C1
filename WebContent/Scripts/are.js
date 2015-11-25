@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", Main, false);
 
-//ログイン処理
-//userName ユーザ名
-//userPass パスワード
-//func 認証完了通知を行う関数
+// ログイン処理
+// userName ユーザ名
+// userPass パスワード
+// func 認証完了通知を行う関数
 function login(userName, userPass, func) {
 	// 認証要求の戻り値を受け取る
 	function onData(value) {
@@ -54,8 +54,8 @@ function start() {
 	group.appendChild(buttonLogout);
 	buttonLogout.type = "button";
 	buttonLogout.value = "ログアウト";
-	
-	//時刻
+
+	// 時刻
 	var today = new Date();
 	var date = today.toLocaleDateString();
 	var time = today.toLocaleTimeString();
@@ -87,19 +87,28 @@ function start() {
 	// ログイン処理後
 	// この中に認証判別後のメイン処理を書く
 	function onLogin(code) {
-		if (code == 0)
-			msg.innerHTML = "エラー";
+		if(code == 1){
+			if(AFL.getCookie("USER_NAME") != null){
+				msg.innerHTML =
+					AFL.sprintf("USER:%s GROUP:%s",
+							AFL.getCookie("USER_NAME"),
+							AFL.getCookie("USER_GROUP"));			
+			}
+			else{
+				msg.innerHTML = "ログインしていません";
+			}			
+		}
 		else
-			msg.innerHTML =
-				AFL.sprintf("USER:%s GROUP:%s",
-						AFL.getCookie("USER_NAME"),
-						AFL.getCookie("USER_GROUP"));
+			msg.innerHTML = "ログインエラー";
+			
+
+			
 	}
 	// -------------------------------------
 }
 
 function Main() {
-	
+
 	start();
 
 	// セレクターで各要素のインスタンスを取得
@@ -112,19 +121,15 @@ function Main() {
 	//
 	var time1 = document.querySelector("output#time1");
 	var date1 = document.querySelector("output#date1");
-	
-
 
 	// クリックイベントの処理
 	button.addEventListener("click", onClick);
 	function onClick() {
 		// 計算式
-		var num = parseFloat(data2.value)
-				/ (parseFloat(data1.value) / 100.0)
-				/ (parseFloat(data1.value) / 100.0)*100;
-		num = Math.round(num)/100;
+		var num = parseFloat(data2.value) / (parseFloat(data1.value) / 100.0)
+				/ (parseFloat(data1.value) / 100.0) * 100;
+		num = Math.round(num) / 100;
 		output.innerHTML = num;
-		
+
 	}
 }
-
