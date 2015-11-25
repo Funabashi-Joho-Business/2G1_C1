@@ -41,19 +41,26 @@ function start() {
 	var group = document.createElement("div");
 	document.body.appendChild(group);
 
-	var inputUser = document.createElement("input#id");
+	var inputUser = document.createElement("input");
 	group.appendChild(inputUser);
-	var inputPass = document.createElement("input#pass");
+	var inputPass = document.createElement("input");
 	group.appendChild(inputPass);
 	inputPass.type = "password";
-	var buttonLogin = document.createElement("input#login");
+	var buttonLogin = document.createElement("input");
 	group.appendChild(buttonLogin);
 	buttonLogin.type = "button";
 	buttonLogin.value = "ログイン";
-	var buttonLogout = document.createElement("input#logout");
+	var buttonLogout = document.createElement("input");
 	group.appendChild(buttonLogout);
 	buttonLogout.type = "button";
 	buttonLogout.value = "ログアウト";
+	
+	//時刻
+	var today = new Date();
+	var date = today.toLocaleDateString();
+	var time = today.toLocaleTimeString();
+	date1.innerHTML = date;
+	time1.innerHTML = time;
 
 	// ボタンが押された場合の処理
 	buttonLogin.onclick = function() {
@@ -92,6 +99,8 @@ function start() {
 }
 
 function Main() {
+	
+	start();
 
 	// セレクターで各要素のインスタンスを取得
 	var output = document.querySelector("output#kekka");
@@ -104,12 +113,7 @@ function Main() {
 	var time1 = document.querySelector("output#time1");
 	var date1 = document.querySelector("output#date1");
 	
-	//時刻
-	var today = new Date();
-	var date = today.toLocaleDateString();
-	var time = today.toLocaleTimeString();
-	date1.innerHTML = date;
-	time1.innerHTML = time;
+
 
 	// クリックイベントの処理
 	button.addEventListener("click", onClick);
@@ -121,7 +125,6 @@ function Main() {
 		num = Math.round(num)/100;
 		output.innerHTML = num;
 		
-
 	}
 }
 
