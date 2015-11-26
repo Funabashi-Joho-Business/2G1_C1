@@ -125,6 +125,13 @@ function Main() {
 		num = Math.round(num)/100;
 		output.innerHTML = num;
 		
+		//データ送信
+		var sendData = {};
+		sendData.cmd = "write";
+		sendData.date = date1.value;
+		sendData.data02 = taizyu.value;
+		AFL.sendJson("TestServlet",sendData,onRecv);
+		
 	}
 }
 
