@@ -28,9 +28,3 @@ body{
 	padding: 30px 0px 30px 0px;
 
 }
-
-table	{margin-left:30px; width:700px; border-collapse:collapse;}
-thead	{background-color:#000; color:#fff;}
-tbody th{text-align:left; background-color:#ccc;}
-tfoot	{background-color:#666; color:#fff; font-size:10pt;}
-tr,th,td{border:solid 1px #000;}
