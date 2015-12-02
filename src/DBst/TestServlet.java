@@ -47,6 +47,7 @@ public class TestServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 	public void init() throws ServletException {
+
 		// TODO 自動生成されたメソッド・スタブ
 		super.init();
 
@@ -54,11 +55,10 @@ public class TestServlet extends HttpServlet {
 		try{
 			mOracle = new Oracle();
 			mOracle.connect("ux4", DB_ID, DB_PASS);
-
 			//テーブルが無ければ作成
 			if(!mOracle.isTable("YAaaaI_DEBUuuu"))
 			{
-				mOracle.execute("create table YAaaaI_DEBUuuu(id number,date01 date,taizyu varchar2(200))");
+				mOracle.execute("create table YAaaaI_DEBUuuu(id number,date01 date,taizyu number)");
 				mOracle.execute("create sequence YAaaaI_DEBUuuu_seq");
 			}
 		} catch (Exception e) {
@@ -97,8 +97,10 @@ public class TestServlet extends HttpServlet {
         if("write".equals(recvData.cmd))
         {
         	//書き込み処理
-        	String sql = String.format("insert into YAaaaI_DEBUuuu values(YAaaaI_DEBUuuu_seq.nextval,'%s','%s')",
-        			recvData.date,recvData.taizyu);
+        	System.out.println("recvData.taizyu =" + recvData.taizyu);
+        	
+        	String sql = "insert into YAaaaI_DEBUuuu values(YAaaaI_DEBUuuu_seq.nextval,sysdate,recvData.taizyu)";
+        	System.out.println("insert="+sql);
         	mOracle.execute(sql);
         }
 
@@ -107,6 +109,7 @@ public class TestServlet extends HttpServlet {
 			//データの送信処理
 			ArrayList<SendData> list = new ArrayList<SendData>();
 			ResultSet res = mOracle.query("select * from YAaaaI_DEBUuuu order by id");
+
 			while(res.next())
 			{
 				SendData sendData = new SendData();

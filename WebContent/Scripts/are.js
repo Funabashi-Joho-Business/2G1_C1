@@ -129,9 +129,22 @@ function Main() {
 		var sendData = {};
 		sendData.cmd = "write";
 		sendData.date = date1.value;
-		sendData.data02 = taizyu.value;
+		sendData.taizyu = data2.value;
 		AFL.sendJson("TestServlet",sendData,onRecv);
 		
+		
+	}
+	
+	//データ受信処理
+	function onRecv(datas)
+	{
+		//内容のクリア
+		output.innerHTML = "";
+		for(var index in datas)
+		{
+			var data = datas[index];
+			output.innerHTML = AFL.sprintf("[%d]%s<br>%s<hr>",data.id,data.name,data.msg) + output.innerHTML;
+		}
 	}
 }
 
