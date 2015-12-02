@@ -20,6 +20,7 @@ class RecvData
 	public String cmd;
 	public Date date;
 	public Double taizyu;
+	public Double sintyo;
 }
 
 class SendData
@@ -27,6 +28,7 @@ class SendData
 	public int id;
 	public Date date;
 	public Double taizyu;
+	public Double sintyo;
 }
 
 /**
@@ -58,7 +60,7 @@ public class TestServlet extends HttpServlet {
 			//テーブルが無ければ作成
 			if(!mOracle.isTable("YAaaaI_DEBUuuu"))
 			{
-				mOracle.execute("create table YAaaaI_DEBUuuu(id number,date01 date,taizyu number)");
+				mOracle.execute("create table YAaaaI_DEBUuuu(id number,date01 date,taizyu number,sintyo number)");
 				mOracle.execute("create sequence YAaaaI_DEBUuuu_seq");
 			}
 		} catch (Exception e) {
@@ -98,8 +100,8 @@ public class TestServlet extends HttpServlet {
         {
         	//書き込み処理
         	System.out.println("recvData.taizyu =" + recvData.taizyu);
-        	
-        	String sql = "insert into YAaaaI_DEBUuuu values(YAaaaI_DEBUuuu_seq.nextval,sysdate,recvData.taizyu)";
+        	String sql = String.format("insert into YAaaaI_DEBUuuu values(YAaaaI_DEBUuuu_seq.nextval,sysdate,'%f','%f')"
+        			,recvData.taizyu,recvData.sintyo);
         	System.out.println("insert="+sql);
         	mOracle.execute(sql);
         }
@@ -116,6 +118,7 @@ public class TestServlet extends HttpServlet {
 				sendData.id = res.getInt(1);
 				sendData.date = res.getDate(2);
 				sendData.taizyu = res.getDouble(3);
+				sendData.sintyo = res.getDouble(4);
 				list.add(sendData);
 			}
 			//JSON形式に変換

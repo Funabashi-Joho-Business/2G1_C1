@@ -130,6 +130,7 @@ function Main() {
 		sendData.cmd = "write";
 		sendData.date = date1.value;
 		sendData.taizyu = data2.value;
+		sendData.sintyo = data1.value;
 		AFL.sendJson("TestServlet",sendData,onRecv);
 		
 		
