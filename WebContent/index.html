@@ -13,54 +13,63 @@
 </head>
 <body>
 	<!-- メイン部分 -->
-	<main>	
-		<h1>BMI測定したった～</h1>
-		<TABLE cellpadding="4" cellspacing="1" border="0" style="font-size:9pt;" background="http://counter.unfinished.jp/counter.php?mode=back&uid=suraimu2&pid=1">
+	<main>
+	<h1>BMI測定したった～</h1>
+	<TABLE cellpadding="4" cellspacing="1" border="0"
+		style="font-size: 9pt;"
+		background="http://counter.unfinished.jp/counter.php?mode=back&uid=suraimu2&pid=1">
 		<TBODY>
-		<TR>
-		<TD bgcolor="#ffffff">累計: 
-		<A href="http://www.unfinished.jp/submit/" target="_blank">
-			<IMG src="http://counter.unfinished.jp/counter.php?mode=total&uid=suraimu2&pid=1" border="0" alt="検索エンジン登録はUNFINISHED">
-		</A>
-	<BR>本日: <A href="http://www.unfinished.jp/seo/" target="_blank">
-	<IMG src="http://counter.unfinished.jp/counter.php?mode=today&uid=suraimu2&pid=1" border="0" alt="SEO対策はUNFINISHED">
-	</A>
-	<BR>昨日: <A href="http://www.unfinished.jp/email/" target="_blank">
-	<IMG src="http://counter.unfinished.jp/counter.php?mode=yesterday&uid=suraimu2&pid=1" border="0" alt="メール配信はUNFINISHED">
-	</A>
-	<BR>
-	<BR>
-	<A href="http://www.unfinished.jp/" target="_blank">
-	<IMG src="http://counter.unfinished.jp/counter.php?mode=logo&uid=suraimu2&pid=1" border="0" alt="アクセスアップはUNFINISHED">
-	</A>
-	</TD>
-	</TR>
-	</TBODY>
+			<TR>
+				<TD bgcolor="#ffffff">累計: <A
+					href="http://www.unfinished.jp/submit/" target="_blank"> <IMG
+						src="http://counter.unfinished.jp/counter.php?mode=total&uid=suraimu2&pid=1"
+						border="0" alt="検索エンジン登録はUNFINISHED">
+				</A> <BR>本日: <A href="http://www.unfinished.jp/seo/"
+					target="_blank"> <IMG
+						src="http://counter.unfinished.jp/counter.php?mode=today&uid=suraimu2&pid=1"
+						border="0" alt="SEO対策はUNFINISHED">
+				</A> <BR>昨日: <A href="http://www.unfinished.jp/email/"
+					target="_blank"> <IMG
+						src="http://counter.unfinished.jp/counter.php?mode=yesterday&uid=suraimu2&pid=1"
+						border="0" alt="メール配信はUNFINISHED">
+				</A> <BR> <BR> <A href="http://www.unfinished.jp/"
+					target="_blank"> <IMG
+						src="http://counter.unfinished.jp/counter.php?mode=logo&uid=suraimu2&pid=1"
+						border="0" alt="アクセスアップはUNFINISHED">
+				</A>
+				</TD>
+			</TR>
+		</TBODY>
 	</TABLE>
-		<h3>BMIとは</h3>
-		<p>簡単に言ってしまえば「肥満度」を示す数値です。<br>
-		この数値が高いと生活習慣病になりやすくなります。<br>
-		適度にチェックして、生活習慣を見直そう！</p>
-		<br>
+	<h3>BMIとは</h3>
+	<p>
+		簡単に言ってしまえば「肥満度」を示す数値です。<br> この数値が高いと生活習慣病になりやすくなります。<br>
+		適度にチェックして、生活習慣を見直そう！
+	</p>
+	<br>
 	<form>
-		<b> 身長：</b> <input type="number" id=data01 size="7" maxlength="3"><br>
-		<br> <b> 体重：</b> <input type="number" id=data02 size="7"
-			maxlength="3"><br>
+		<b> 身長：</b> <input type="number" id=data01 size="7" maxlength="3"value=0>
+		<br> <br> 
+		<b> 体重：</b> 
+			<input type="number" id=data02 size="7" maxlength="3" value=0>
+			<br>
 		<br>
-		<h1>BMI=<output id="kekka">0</output></h1>
-		<input type="button" id="bt" value="計算する"><br><br>
-		<a href="http://www.yahoo.co.jp/">Google clome</a><br>
-		<a href="https://www.hellowork.go.jp/">リクナビ</a>
+		<h1>
+			BMI=
+			<output id="kekka">0</output>
+		</h1>
+		<input type="button" id="bt" value="計算する"><br>
+		<br> <a href="http://www.yahoo.co.jp/">Google clome</a><br>
+		<a href="https://www.hellowork.go.jp/">リクナビ</a> <br> <br>
+		<output id="date1">date</output>
 		<br>
-		<br>
-		<output  id = "date1">date</output><br>
-		<output  id = "time1">time</output>
+		<output id="time1">time</output>
 
 	</form>
 
 	</main>
-	
-	
+
+
 	<!-- ---- -->
 </body>
 </html>

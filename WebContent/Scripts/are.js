@@ -87,22 +87,16 @@ function start() {
 	// ログイン処理後
 	// この中に認証判別後のメイン処理を書く
 	function onLogin(code) {
-		if(code == 1){
-			if(AFL.getCookie("USER_NAME") != null){
-				msg.innerHTML =
-					AFL.sprintf("USER:%s GROUP:%s",
-							AFL.getCookie("USER_NAME"),
-							AFL.getCookie("USER_GROUP"));			
-			}
-			else{
+		if (code == 1) {
+			if (AFL.getCookie("USER_NAME") != null) {
+				msg.innerHTML = AFL.sprintf("USER:%s GROUP:%s", AFL
+						.getCookie("USER_NAME"), AFL.getCookie("USER_GROUP"));
+			} else {
 				msg.innerHTML = "ログインしていません";
-			}			
-		}
-		else
+			}
+		} else
 			msg.innerHTML = "ログインエラー";
-			
 
-			
 	}
 	// -------------------------------------
 }
@@ -125,11 +119,17 @@ function Main() {
 	// クリックイベントの処理
 	button.addEventListener("click", onClick);
 	function onClick() {
-		// 計算式
-		var num = parseFloat(data2.value) / (parseFloat(data1.value) / 100.0)
-				/ (parseFloat(data1.value) / 100.0) * 100;
-		num = Math.round(num) / 100;
-		output.innerHTML = num;
+		if (data1 == 0 && data2 == 0) {
+			var num = 0;
+			output.innerHTML = num;
+		} else {
+			// 計算式
+			var num = parseFloat(data2.value)
+					/ (parseFloat(data1.value) / 100.0)
+					/ (parseFloat(data1.value) / 100.0) * 100;
+			num = Math.round(num) / 100;
+			output.innerHTML = num;
+		}
 
 	}
 }
