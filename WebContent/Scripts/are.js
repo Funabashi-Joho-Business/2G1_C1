@@ -112,6 +112,8 @@ function Main() {
 	//
 	var time1 = document.querySelector("output#time1");
 	var date1 = document.querySelector("output#date1");
+	//
+	var DBout =  document.querySelector("output#DBkekka");
 	
 
 
@@ -140,11 +142,12 @@ function Main() {
 	function onRecv(datas)
 	{
 		//内容のクリア
-		output.innerHTML = "";
+		DBout.innerHTML = "";
 		for(var index in datas)
 		{
 			var data = datas[index];
-			output.innerHTML = AFL.sprintf("[%d]%s<br>%s<hr>",data.id,data.name,data.msg) + output.innerHTML;
+			var date = new Date(data.date);
+			DBout.innerHTML = AFL.sprintf("%d年%d月%d日<br>体重:%s<br>身長:%s<hr>",date.getFullYear(),date.getMonth()+1,date.getDay(),data.taizyu,data.sintyo) + DBout.innerHTML;
 		}
 	}
 }

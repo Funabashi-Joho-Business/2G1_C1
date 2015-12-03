@@ -62,6 +62,8 @@ public class TestServlet extends HttpServlet {
 			{
 				mOracle.execute("create table YAaaaI_DEBUuuu(id number,date01 date,taizyu number,sintyo number)");
 				mOracle.execute("create sequence YAaaaI_DEBUuuu_seq");
+				
+				System.out.println("create = YAaaaI_DEBUuuu");
 			}
 		} catch (Exception e) {
 			System.err.println("認証に失敗しました");
